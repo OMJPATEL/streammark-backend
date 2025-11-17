@@ -28,3 +28,12 @@ model LikedItem {
   category    String
   createdAt   DateTime        @default(now())
 }
+
+model Movie {
+  id          String     @id @default(uuid())
+  title       String
+  year        Int
+  poster      String
+  description String
+  likedItems  MovieLike[]
+}
