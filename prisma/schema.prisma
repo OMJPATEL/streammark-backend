@@ -28,3 +28,11 @@ model LikedItem {
   category    String
   createdAt   DateTime        @default(now())
 }
+
+model FunFact {
+  id          String   @id @default(uuid())
+  title       String
+  url         String
+  description String
+  category    String
+}
