@@ -29,6 +29,7 @@ model LikedItem {
   createdAt   DateTime        @default(now())
 }
 
+
 model Movie {
   id          String     @id @default(uuid())
   title       String
@@ -36,3 +37,12 @@ model Movie {
   poster      String
   description String 
 }
+
+model FunFact {
+  id          String   @id @default(uuid())
+  title       String
+  url         String
+  description String
+  category    String
+}
+
