@@ -1,0 +1,30 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model EducationalItem {
+  id         String      @id
+  title      String
+  url        String
+  thumbnail  String?
+  channel    String?
+  topic      String
+  likedItems LikedItem[]
+}
+
+model LikedItem {
+  id          String          @id @default(uuid())
+  eduId       String?
+  educational EducationalItem? @relation(fields: [eduId], references: [id])
+  title       String
+  url         String?
+  thumbnail   String?
+  channel     String?
+  category    String
+  createdAt   DateTime        @default(now())
+}
