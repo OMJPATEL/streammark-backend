@@ -34,6 +34,5 @@ model Movie {
   title       String
   year        Int
   poster      String
-  description String
-  likedItems  MovieLike[]
+  description String 
 }
