@@ -12,4 +12,4 @@ app.use(corsMiddleware);
 
 app.use("/api/v1/liked", likedRoutes);
 app.use("/api/v1/educational", educationalRoutes);
-app.use("/funfacts", funFactsRoutes);
+app.use("/api/v1/funfacts", funFactsRoutes);
