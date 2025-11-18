@@ -14,7 +14,7 @@ export const likedController = {
 
   remove: async (req: Request, res: Response) => {
     const { id } = req.params;
-    await likedService.remove(id);
+    await likedService.delete(id); 
     res.json({ message: "Deleted successfully" });
   }
 };
