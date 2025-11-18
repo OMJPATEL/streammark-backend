@@ -8,6 +8,7 @@ import movieRoutes from "./api/v1/routes/movie.routes";
 
 import funFactsRoutes from "./api/v1/routes/funfacts.routes";
 
+import musicRoutes from "./api/v1/routes/music.routes";
 
 export const app = express();
 
@@ -20,3 +21,5 @@ app.use("/api/v1/educational", educationalRoutes);
 app.use("/api/v1/movies", movieRoutes);
 
 app.use("/api/v1/funfacts", funFactsRoutes);
+
+app.use("/api/v1/music", musicRoutes);

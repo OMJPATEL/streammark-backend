@@ -46,3 +46,10 @@ model FunFact {
   category    String
 }
 
+model Music {
+  id       Int    @id @default(autoincrement())
+  title    String
+  artist   String
+  duration String
+  videoId  String
+}
