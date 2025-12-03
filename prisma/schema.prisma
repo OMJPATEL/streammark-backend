@@ -7,35 +7,50 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model User {
+  id        String      @id @default(uuid())
+  clerkId   String      @unique
+  createdAt DateTime    @default(now())
+
+  likedItems LikedItem[]
+}
+
 model EducationalItem {
-  id        String @id @default(uuid())
-  title     String
-  url       String
-  thumbnail String?
-  channel   String?
-  topic     String
+  id         String      @id
+  title      String
+  url        String
+  thumbnail  String?
+  channel    String?
+  topic      String
+  likedItems LikedItem[]
 }
 
 model LikedItem {
-  id        String   @id @default(uuid())
-  title     String
-  url       String?
-  thumbnail String?
-  channel   String?
-  category  String
-  createdAt DateTime @default(now())
+  id          String          @id @default(uuid())
+  eduId       String?
+  educational EducationalItem? @relation(fields: [eduId], references: [id])
+
+  title       String
+  url         String?
+  thumbnail   String?
+  channel     String?
+  category    String
+  createdAt   DateTime        @default(now())
+  userId      String
+  user        User           @relation(fields: [userId], references: [id])
 }
 
+
 model Movie {
-  id          String @id @default(uuid())
+  id          String     @id @default(uuid())
   title       String
   year        Int
   poster      String
-  description String
+  description String 
 }
 
 model FunFact {
-  id          String @id @default(uuid())
+  id          String   @id @default(uuid())
   title       String
   url         String
   description String

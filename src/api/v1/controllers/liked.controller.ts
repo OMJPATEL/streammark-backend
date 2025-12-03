@@ -7,14 +7,22 @@ export const likedController = {
     res.json(items);
   },
 
+  getMyLiked: async (req: any, res: Response) => {
+    const clerkId = req.auth.userId;
+    const items = await likedService.getMyLiked(clerkId);
+    res.json(items);
+  },
+
   create: async (req: Request, res: Response) => {
-    const item = await likedService.create(req.body);
+    const clerkId = req.auth!.userId;
+    const item = await likedService.create(req.body, clerkId);
     res.status(201).json(item);
   },
 
   remove: async (req: Request, res: Response) => {
+    const clerkId = req.auth!.userId;
     const { id } = req.params;
-    await likedService.delete(id); 
+    await likedService.delete(req.params.id, clerkId);
     res.json({ message: "Deleted successfully" });
   }
 };

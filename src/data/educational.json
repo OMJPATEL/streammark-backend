@@ -1,0 +1,62 @@
+[
+  {
+    "item": "{\"title\": \"React Basics for Beginners\", \"url\": \"https://www.youtube.com/embed/Ke90Tje7VS0\", \"channel\": \"Programming with Mosh\", \"topic\": \"Frontend\"}"
+  },
+  {
+    "item": "{\"title\": \"JavaScript Crash Course\", \"url\": \"https://www.youtube.com/embed/DHjqpvDnNGE\", \"channel\": \"Fireship\", \"topic\": \"JavaScript\"}"
+  },
+  {
+    "item": "{\"title\": \"Understanding API Requests\", \"url\": \"https://www.youtube.com/embed/GZvSYJDk-us\", \"channel\": \"Traversy Media\", \"topic\": \"Backend\"}"
+  },
+  {
+    "item": "{\"title\": \"Async vs Sync in JavaScript\", \"url\": \"https://www.youtube.com/embed/PoRJizFvM7s\", \"channel\": \"Programming with Mosh\", \"topic\": \"JavaScript\"}"
+  },
+  {
+    "item": "{\"title\": \"How the Internet Works\", \"url\": \"https://www.youtube.com/embed/TNQsmPf24go\", \"channel\": \"Fireship\", \"topic\": \"Networking\"}"
+  },
+  {
+    "item": "{\"title\": \"Node.js Crash Course\", \"url\": \"https://www.youtube.com/embed/fBNz5xF-Kx4\", \"channel\": \"Traversy Media\", \"topic\": \"Backend\"}"
+  },
+  {
+    "item": "{\"title\": \"What is REST API?\", \"url\": \"https://www.youtube.com/embed/Q-BpqyOT3a8\", \"channel\": \"Web Dev Simplified\", \"topic\": \"Backend\"}"
+  },
+  {
+    "item": "{\"title\": \"CSS Flexbox Tutorial\", \"url\": \"https://www.youtube.com/embed/fYq5PXgSsbE\", \"channel\": \"Net Ninja\", \"topic\": \"Frontend\"}"
+  },
+  {
+    "item": "{\"title\": \"React useEffect Mastery\", \"url\": \"https://www.youtube.com/embed/0ZJgIjIuY7U\", \"channel\": \"Dev Ed\", \"topic\": \"Frontend\"}"
+  },
+  {
+    "item": "{\"title\": \"Learn Git In 20 Minutes\", \"url\": \"https://www.youtube.com/embed/IHaT71kmiRg\", \"channel\": \"Fireship\", \"topic\": \"Tools\"}"
+  },
+  {
+    "item": "{\"title\": \"Database Concepts Explained\", \"url\": \"https://www.youtube.com/embed/HXV3zeQKqGY\", \"channel\": \"Fireship\", \"topic\": \"Database\"}"
+  },
+  {
+    "item": "{\"title\": \"What Happens When You Search Google?\", \"url\": \"https://www.youtube.com/embed/8dWL3wF_OMw\", \"channel\": \"Fireship\", \"topic\": \"Web\"}"
+  },
+  {
+    "item": "{\"title\": \"JavaScript Promises Explained\", \"url\": \"https://www.youtube.com/embed/novBIqZh2Wg\", \"channel\": \"Net Ninja\", \"topic\": \"JavaScript\"}"
+  },
+  {
+    "item": "{\"title\": \"Frontend vs Backend Explained\", \"url\": \"https://www.youtube.com/embed/ocwnNSved50\", \"channel\": \"Fireship\", \"topic\": \"Career\"}"
+  },
+  {
+    "item": "{\"title\": \"What is Docker?\", \"url\": \"https://www.youtube.com/embed/eGz9DS-aIeY\", \"channel\": \"TechWorld with Nana\", \"topic\": \"DevOps\"}"
+  },
+  {
+    "item": "{\"title\": \"React Router Tutorial\", \"url\": \"https://www.youtube.com/embed/Ul3y1LXxzdU\", \"channel\": \"Web Dev Simplified\", \"topic\": \"Frontend\"}"
+  },
+  {
+    "item": "{\"title\": \"HTTP Explained in 6 Minutes\", \"url\": \"https://www.youtube.com/embed/iYM2zFP3Zn0\", \"channel\": \"Fireship\", \"topic\": \"Networking\"}"
+  },
+  {
+    "item": "{\"title\": \"MongoDB Crash Course\", \"url\": \"https://www.youtube.com/embed/-56x56UppqQ\", \"channel\": \"Traversy Media\", \"topic\": \"Database\"}"
+  },
+  {
+    "item": "{\"title\": \"Event Loop Explained\", \"url\": \"https://www.youtube.com/embed/8aGhZQkoFbQ\", \"channel\": \"JSConf\", \"topic\": \"JavaScript\"}"
+  },
+  {
+    "item": "{\"title\": \"Build a Full Stack App in 1 Video\", \"url\": \"https://www.youtube.com/embed/Fdf5aTYRW0E\", \"channel\": \"Traversy Media\", \"topic\": \"Fullstack\"}"
+  }
+]
