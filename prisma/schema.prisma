@@ -7,6 +7,14 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model User {
+  id        String      @id @default(uuid())
+  clerkId   String      @unique
+  createdAt DateTime    @default(now())
+
+  likedItems LikedItem[]
+}
+
 model EducationalItem {
   id         String      @id
   title      String
@@ -27,6 +35,8 @@ model LikedItem {
   channel     String?
   category    String
   createdAt   DateTime        @default(now())
+  userId      String?
+  user        User?           @relation(fields: [userId], references: [id])
 }
 
 
