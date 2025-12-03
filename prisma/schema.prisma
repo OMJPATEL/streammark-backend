@@ -29,14 +29,15 @@ model LikedItem {
   id          String          @id @default(uuid())
   eduId       String?
   educational EducationalItem? @relation(fields: [eduId], references: [id])
+
   title       String
   url         String?
   thumbnail   String?
   channel     String?
   category    String
   createdAt   DateTime        @default(now())
-  userId      String?
-  user        User?           @relation(fields: [userId], references: [id])
+  userId      String
+  user        User           @relation(fields: [userId], references: [id])
 }
 
 

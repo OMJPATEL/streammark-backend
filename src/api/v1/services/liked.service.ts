@@ -1,14 +1,18 @@
 import { prisma } from "../../../prisma/client";
 
+async function getOrCreateUser(clerkId: string) {
+  return prisma.user.upsert({
+    where: { clerkId },
+    update: {},
+    create: { clerkId },
+  });
+}
+
 export const likedService = {
   getAll: () => prisma.likedItem.findMany(),
 
   getMyLiked: async (clerkId: string) => {
-    const user = await prisma.user.findUnique({
-      where: { clerkId },
-    });
-
-    if (!user) return [];
+    const user = await getOrCreateUser(clerkId);
 
     return prisma.likedItem.findMany({
       where: { userId: user.id },
@@ -16,11 +20,7 @@ export const likedService = {
   },
 
   create: async (data: any, clerkId: string) => {
-    const user = await prisma.user.findUnique({
-      where: { clerkId },
-    });
-
-    if (!user) throw new Error("User not found");
+    const user = await getOrCreateUser(clerkId);
 
     return prisma.likedItem.create({
       data: {
@@ -31,16 +31,12 @@ export const likedService = {
   },
 
   delete: async (id: string, clerkId: string) => {
-    const user = await prisma.user.findUnique({
-      where: { clerkId },
-    });
-
-    if (!user) throw new Error("User not found");
+    const user = await getOrCreateUser(clerkId);
 
     return prisma.likedItem.deleteMany({
       where: {
         id,
-        userId: user.id, 
+        userId: user.id,
       },
     });
   },
