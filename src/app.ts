@@ -14,18 +14,19 @@ import musicRoutes from "./api/v1/routes/music.routes";
 
 import { ClerkExpressWithAuth, ClerkExpressRequireAuth } from "@clerk/clerk-sdk-node";
 
-
 export const app = express();
 
 app.use(express.json());
 app.use(corsMiddleware);
 app.use(ClerkExpressWithAuth());
+
 app.get("/api/v1/protected", ClerkExpressRequireAuth(), (req: any, res) => {
   res.json({
     message: "You are authenticated!",
     userId: req.auth.userId,
   });
 });
+
 app.use("/api/v1/liked", likedRoutes);
 app.use("/api/v1/educational", educationalRoutes);
 
