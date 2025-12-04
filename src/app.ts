@@ -1,6 +1,8 @@
 import express from "express";
 import { corsMiddleware } from "./config/cors";
 
+import commentRoutes from "./api/v1/routes/comment.routes";
+
 import likedRoutes from "./api/v1/routes/liked.routes";
 import educationalRoutes from "./api/v1/routes/educational.routes";
 
@@ -32,3 +34,5 @@ app.use("/api/v1/movies", movieRoutes);
 app.use("/api/v1/funfacts", funFactsRoutes);
 
 app.use("/api/v1/music", musicRoutes);
+
+app.use("/api/v1/comments", commentRoutes);
