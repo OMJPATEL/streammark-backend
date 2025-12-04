@@ -5,14 +5,14 @@
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "build": "tsc",
+    "start": "node dist/server.js",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
+    "prisma:deploy": "prisma migrate deploy",
     "prisma:seed": "prisma db seed",
-    "start": "node dist/server.js",
-    "seed": "ts-node prisma/seed.ts",
-    "vercel-build": "npm run prisma:migrate && npm run prisma:seed && npm run build"
-
+    "vercel-build": "npm run build"
   },
+  
   "dependencies": {
     "@clerk/clerk-sdk-node": "^4.13.23",
     "@prisma/client": "^5.9.1",
