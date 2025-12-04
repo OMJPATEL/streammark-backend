@@ -14,7 +14,7 @@ import musicRoutes from "./api/v1/routes/music.routes";
 
 import { ClerkExpressWithAuth, ClerkExpressRequireAuth } from "@clerk/clerk-sdk-node";
 
-export const app = express();
+const app = express();
 
 app.use(express.json());
 app.use(corsMiddleware);
@@ -37,3 +37,5 @@ app.use("/api/v1/funfacts", funFactsRoutes);
 app.use("/api/v1/music", musicRoutes);
 
 app.use("/api/v1/comments", commentRoutes);
+
+export default app;
