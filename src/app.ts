@@ -1,6 +1,8 @@
 import express from "express";
 import { corsMiddleware } from "./config/cors";
 
+import commentRoutes from "./api/v1/routes/comment.routes";
+
 import likedRoutes from "./api/v1/routes/liked.routes";
 import educationalRoutes from "./api/v1/routes/educational.routes";
 
@@ -27,9 +29,11 @@ app.get("/api/v1/protected", ClerkExpressRequireAuth(), (req: any, res) => {
 
 app.use("/api/v1/liked", likedRoutes);
 app.use("/api/v1/educational", educationalRoutes);
+
 app.use("/api/v1/movies", movieRoutes);
+
 app.use("/api/v1/funfacts", funFactsRoutes);
+
 app.use("/api/v1/music", musicRoutes);
 
-
-export default app;
+app.use("/api/v1/comments", commentRoutes);
