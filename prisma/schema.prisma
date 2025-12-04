@@ -13,6 +13,7 @@ model User {
   createdAt DateTime    @default(now())
 
   likedItems LikedItem[]
+  comments    Comment[]
 }
 
 model EducationalItem {
@@ -63,4 +64,15 @@ model Music {
   artist   String
   duration String
   videoId  String
+}
+
+model Comment {
+  id        String   @id @default(uuid())
+  text      String
+  createdAt DateTime @default(now())
+
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+
+  videoId   String   
 }
