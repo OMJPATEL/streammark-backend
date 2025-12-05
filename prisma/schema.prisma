@@ -8,12 +8,12 @@ datasource db {
 }
 
 model User {
-  id        String      @id @default(uuid())
-  clerkId   String      @unique
-  createdAt DateTime    @default(now())
+  id        String   @id @default(uuid())
+  clerkId   String   @unique
+  createdAt DateTime @default(now())
 
   likedItems LikedItem[]
-  comments    Comment[]
+  comments   Comment[]
 }
 
 model EducationalItem {
@@ -27,31 +27,30 @@ model EducationalItem {
 }
 
 model LikedItem {
-  id          String          @id @default(uuid())
+  id          String           @id @default(uuid())
   eduId       String?
   educational EducationalItem? @relation(fields: [eduId], references: [id])
 
-  title       String
-  url         String?
-  thumbnail   String?
-  channel     String?
-  category    String
-  createdAt   DateTime        @default(now())
-  userId      String
-  user        User           @relation(fields: [userId], references: [id])
+  title     String
+  url       String?
+  thumbnail String?
+  channel   String?
+  category  String
+  createdAt DateTime @default(now())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
 }
 
-
 model Movie {
-  id          String     @id @default(uuid())
+  id          String @id @default(uuid())
   title       String
   year        Int
   poster      String
-  description String 
+  description String
 }
 
 model FunFact {
-  id          String   @id @default(uuid())
+  id          String @id @default(uuid())
   title       String
   url         String
   description String
@@ -71,8 +70,15 @@ model Comment {
   text      String
   createdAt DateTime @default(now())
 
-  userId    String
-  user      User     @relation(fields: [userId], references: [id])
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
 
-  videoId   String   
+  videoId String
+}
+
+model CompletedEducation {
+  id            String   @id @default(cuid())
+  userId        String
+  educationalId String
+  completedAt   DateTime @default(now())
 }
