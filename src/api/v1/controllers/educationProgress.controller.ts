@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { prisma } from "../../../prisma/client";
 
 export const educationProgressController = {
-  // GET completed educational IDs for logged-in user
+
   getCompleted: async (req: any, res: Response) => {
     try {
       const userId = req.auth.userId;
@@ -18,7 +18,7 @@ export const educationProgressController = {
     }
   },
 
-  // POST mark completed
+
   markCompleted: async (req: any, res: Response) => {
     try {
       const userId = req.auth.userId;
@@ -40,7 +40,7 @@ export const educationProgressController = {
     }
   },
 
-  // DELETE remove completed record
+  
   removeCompleted: async (req: any, res: Response) => {
     try {
       const userId = req.auth.userId;
